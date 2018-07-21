@@ -10,6 +10,12 @@ const config = {
     module: {
         rules: [
             {
+                test: /\.(vue|js|jsx)$/,
+                loader: 'eslint-loader',
+                exclude: /node_module/,
+                enforce: 'pre'
+            },
+            {
                 test: /\.vue$/,
                 loader: "vue-loader"
             },
